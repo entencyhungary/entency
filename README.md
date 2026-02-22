@@ -1,135 +1,122 @@
-﻿# ENTENCY
+ENTENCY
 
-**A unified neural infrastructure for the next-generation internet.**
+Unified distributed execution infrastructure.
 
-ENTENCY is building a new foundation layer for distributed applications - combining a browser runtime, a decentralized execution network, and a programmable protocol stack into a single coherent system.
+ENTENCY is a system-level architecture that integrates:
 
-This repository serves as the public-facing entry point to the ENTENCY ecosystem.
+A unified workstation runtime
 
----
+A distributed chunk-based node network
 
-# Vision
+A programmable protocol layer
 
-The web evolved in layers.
+Deterministic multi-platform release infrastructure
 
-Static pages.
-Dynamic applications.
-Cloud platforms.
-Decentralized networks.
 
-Yet fragmentation remains.
+It is not a browser.
+It is not a node.
+It is not a hosting layer.
 
-Different protocols.
-Different runtimes.
-Different trust models.
-Different execution environments.
+It is an execution model.
 
-ENTENCY unifies them.
+This repository is the public entry point to the ENTENCY ecosystem.
 
-The goal is not to replace the internet.
-The goal is to evolve it.
-
-A programmable, protocol-agnostic, distributed execution layer - accessible through a unified workstation.
 
 ---
 
-# What Problem Does ENTENCY Solve?
+Architectural Intent
 
-Modern digital infrastructure is fragmented:
+The modern internet is layered but fragmented.
 
-- Web browsers operate in isolated sandboxes.
-- Distributed systems require complex integration layers.
-- Streaming, hosting, execution, and networking are separate stacks.
-- Decentralized systems lack cohesive user-facing runtimes.
+HTTP handles transport.
+Browsers handle rendering.
+Nodes handle distribution.
+Cloud handles orchestration.
+Streaming uses parallel infrastructure.
 
-ENTENCY integrates:
+Execution, protocol, storage, and distribution are separated into silos.
 
-- Protocol handling
-- Execution environment
-- Content distribution
-- Secure session lifecycle management
-- Distributed node orchestration
+ENTENCY collapses those silos into a unified architecture.
 
-Into a single architecture.
+The goal is not to replace the web.
 
----
+The goal is to create a deterministic, protocol-extensible execution layer that is:
 
-# Why Is It Different?
+Distributed-native
 
-Most systems focus on one layer:
+Session-controlled
 
-- A browser.
-- A node.
-- A blockchain.
-- A hosting platform.
-- A streaming network.
+Chunk-oriented
 
-ENTENCY integrates them into a unified protocol ecosystem.
+Multi-architecture reproducible
 
-It is not a wrapper around existing infrastructure.
-It is an extensible runtime designed for protocol-level evolution.
 
-Key differences:
-
-- Native support for custom protocols (e.g. gns://)
-- Integrated distributed node system (GNS)
-- Session-driven architecture
-- Multi-platform runtime (Windows / Linux x64 / Linux ARM64)
-- CI-based reproducible builds
-- Cross-platform packaging pipeline
-- Deterministic release infrastructure
-
-ENTENCY is not a website.
-It is a platform layer.
 
 ---
 
-# Why Now?
+System Overview
 
-Three forces are converging:
+ENTENCY consists of two tightly coupled subsystems:
 
-1. Hardware decentralization (ARM boards, edge devices)
-2. Distributed computing becoming mainstream
-3. The need for protocol-level innovation beyond HTTP
+ENTENCY UP
 
-The infrastructure of the next decade cannot rely purely on centralized stacks.
+Unified Protocol Browser & Workstation Runtime
 
-ENTENCY is designed for distributed-native environments.
+Responsibilities:
 
----
+Session lifecycle management (FSM-based)
 
-# Why ENTENCY?
+Protocol routing engine
 
-Because the system is built holistically.
+gns:// resolution
 
-ENTENCY UP (Unified Protocol Browser and Workstation Runtime)
-+
-ENTENCY GNS (Global Neural System)
-==================================
+Local runtime isolation
 
-Unified distributed execution environment.
+Distributed node communication
 
-This is not an incremental extension of the web.
+Integrated execution surface
 
-It is an architectural rethink.
+
+ENTENCY UP controls state and protocol.
+
 
 ---
 
-# Architecture Overview
+ENTENCY GNS
 
-High-level system structure:
+Global Neural System
 
-```
+Responsibilities:
+
+Distributed chunk storage
+
+Content fragmentation and reassembly
+
+Cross-node streaming
+
+Node identity model
+
+Fault-tolerant routing
+
+Execution layer abstraction
+
+
+GNS controls distribution and reconstruction.
+
+
+---
+
+High-Level Architecture
+
 +---------------------------------------------------------+
 |                    ENTENCY UP                           |
-|    (Unified Protocol Browser & Workstation Runtime)     |
 |                                                         |
 |  +-------------------+     +------------------------+   |
 |  | Session FSM       | --> | Protocol Router        |   |
 |  +-------------------+     +------------------------+   |
 |            |                         |                  |
 |            v                         v                  |
-|     Local Runtime Layer       gns:// Handler            |
+|     Runtime Layer             gns:// Handler            |
 |            |                         |                  |
 +------------+-------------------------+------------------+
              |
@@ -144,138 +131,307 @@ High-level system structure:
 |           v                     v                       |
 |     Storage Layer        Execution Layer                |
 +---------------------------------------------------------+
-```
 
-Core components:
+Separation of control and distribution layers is intentional.
 
-**ENTENCY UP**
+Deterministic lifecycle at the top.
+Distributed reconstruction at the bottom.
 
-- Unified browser runtime
-- Protocol execution layer
-- Integrated GNS communication
-- Multi-tab session architecture (planned expansion)
-- Local and distributed content resolution
-
-**ENTENCY GNS**
-
-- Distributed node network
-- Chunked content distribution
-- Streaming and hosting support
-- Deterministic rebuild of distributed assets
-- Cross-node orchestration
 
 ---
 
-# Key Capabilities
+Core Capabilities (Current State)
 
-- Custom protocol resolution (gns://)
-- Distributed streaming playback
-- Web hosting via distributed node layer
-- Local node deployment
-- ARM64 board compatibility
-- Electron-based cross-platform runtime
-- Deterministic CI release builds
-- Multi-architecture packaging
+gns:// protocol resolution
 
----
+Local node integration
 
-# Screenshots
+Embedded GNS binary per platform
 
-### ENTENCY UP Interface
+Windows x64 packaging
 
-![ENTENCY UP UI](./assets/screenshots/up-interface.png)
+Linux x64 packaging
 
-### GNS Node Runtime
+Linux ARM64 packaging
 
-![GNS Runtime](./assets/screenshots/gns-runtime.png)
+Deterministic CI build pipeline
 
-### Streaming Playback via gns://
+Version-locked runtime/node coupling
 
-![Streaming Playback](./assets/screenshots/streaming.png)
+Streaming via chunked reconstruction
+
+Session-driven navigation
+
+
 
 ---
 
-# Roadmap
+Detailed Roadmap
 
-### Phase 1 — Core Architecture & Interface Foundation
+The roadmap is architecture-driven, not feature-driven.
 
-- Core runtime architecture design
-- Unified workstation engine (ENTENCY UP)
-- Foundational GNS node integration layer
-- Protocol routing framework
-- Session lifecycle engine (FSM-based)
-- UI system architecture and design language
-- Cross-platform rendering layer
-- Brand identity and interaction model
+Each phase represents structural evolution.
 
-### Phase 2 - Core Stability (Current)
-
-- Local node integration
-- Windows x64 packaging
-- Linux x64 and Linux ARM64 packaging
-- Deterministic CI builds
-- Unified release pipeline
-
-### Phase 3 - Distributed Chunk Network
-
-- Cross-node chunk orchestration
-- Content fragmentation and reassembly
-- Distributed streaming layer
-- Fault tolerance mechanisms
-
-### Phase 4 - Protocol Expansion
-
-- Extended gns:// capabilities
-- Secure node identity model
-- Tokenized network fuel layer (ENT)
-
-### Phase 5 - Ecosystem Layer
-
-- Public SDK
-- Developer integration tools
-- Visualization dashboards
-- Monitoring and analytics layer
 
 ---
 
-# Release Downloads
+Phase 1 — Core Architecture & Interface Foundation (Completed)
 
-Latest releases:
+Objective: Establish deterministic runtime control and platform reproducibility.
 
-Windows Installer
--> [https://github.com/entencyhungary/entency/releases/latest](https://github.com/entencyhungary/entency/releases/latest)
+ENTENCY UP:
 
-Linux x64 (.deb)
--> [https://github.com/entencyhungary/entency/releases/latest](https://github.com/entencyhungary/entency/releases/latest)
+Workstation runtime foundation
 
-Linux ARM64 (.deb)
--> [https://github.com/entencyhungary/entency/releases/latest](https://github.com/entencyhungary/entency/releases/latest)
+Session FSM lifecycle engine
 
-(Links are NOT available yet)
+Protocol routing framework
+
+gns:// handler
+
+Local runtime isolation boundary
+
+UI system architecture
+
+Cross-platform rendering layer
+
+
+ENTENCY GNS:
+
+Local node runtime
+
+Basic chunk storage model
+
+Initial streaming support
+
+Runtime binary integration into UP
+
+
+Infrastructure:
+
+Multi-architecture packaging (Win x64 / Linux x64 / ARM64)
+
+Deterministic CI builds
+
+Unified release pipeline
+
+Embedded node version locking
+
+
+Deliverable: Stable workstation runtime coupled with local GNS node across supported platforms.
+
 
 ---
 
-# Technical Principles
+Phase 2 — Distributed Infrastructure Hardening (In Progress)
 
-- Deterministic builds
-- Platform-native packaging
-- Separation of runtime and distribution layer
-- Protocol-level extensibility
-- Architecture-first engineering
-- Closed-core during foundational development
+Objective: Transition from local-node execution to distributed multi-node architecture.
+
+ENTENCY GNS Expansion:
+
+Cross-node chunk distribution model
+
+Deterministic chunk hashing
+
+Integrity verification pipeline
+
+Multi-source chunk retrieval strategy
+
+Node discovery protocol
+
+Peer handshake model
+
+Fault-tolerant chunk reassembly
+
+Distributed streaming buffer synchronization
+
+
+Execution & Storage Layer:
+
+Content fragmentation engine
+
+Adaptive bandwidth routing
+
+Node-level resource allocation control
+
+Distributed storage abstraction
+
+Execution scheduling primitives
+
+
+Security & Trust:
+
+Node identity structure
+
+Signed chunk verification
+
+Session-level trust boundary definition
+
+Protocol isolation enforcement
+
+
+Infrastructure:
+
+Deterministic build verification across environments
+
+Artifact integrity validation
+
+Runtime-node compatibility enforcement
+
+
+Deliverable: Reliable distributed chunk-based streaming and hosting across multiple GNS nodes.
+
 
 ---
 
-# Philosophy
+Phase 3 — Protocol & Intelligence Layer
 
-Technology is not just code.
+Objective: Expand ENTENCY into a programmable protocol ecosystem.
 
-It is infrastructure.
-It is narrative.
-It is architecture.
+Protocol Evolution:
 
-ENTENCY is building infrastructure for systems that do not yet exist.
+Extended gns:// capabilities
+
+Protocol extension registry
+
+Unified protocol negotiation engine
+
+Secure protocol sandbox model
+
+Runtime protocol capability discovery
+
+
+ENT Network Fuel Layer (ENT):
+
+Deterministic resource metering abstraction
+
+Execution cost modeling
+
+Node participation accounting layer
+
+Incentive modeling groundwork
+
+Deterministic usage tracking
+
+
+Execution Intelligence:
+
+Adaptive routing decisions
+
+Node performance profiling
+
+Smart chunk prioritization
+
+Runtime load balancing logic
+
+Predictive buffer optimization
+
+
+Developer Surface:
+
+SDK groundwork
+
+Node interaction API
+
+Local development node toolkit
+
+Protocol documentation framework
+
+
+Deliverable: Programmable distributed execution runtime with protocol-level extensibility.
+
 
 ---
 
-Core engine is currently closed during active development.
+Phase 4 — Ecosystem & Platform Layer
+
+Objective: Transform ENTENCY into a full distributed platform.
+
+ENTENCY UP Expansion:
+
+Multi-workspace architecture
+
+Advanced session orchestration
+
+Integrated node dashboard
+
+Visual network topology viewer
+
+Developer console layer
+
+
+GNS Network Maturity:
+
+Large-scale distributed deployment model
+
+Cross-region node clustering
+
+Edge-device orchestration (ARM boards)
+
+Automated node provisioning tools
+
+Monitoring abstraction layer
+
+
+Developer & Community Layer:
+
+Public SDK release
+
+Plugin architecture foundation
+
+Stable / experimental release channels
+
+Documentation portal
+
+Integration guides
+
+
+Operational Readiness:
+
+Signed binaries across platforms
+
+Release automation hardening
+
+Long-term support strategy
+
+Telemetry (opt-in only)
+
+
+Deliverable: Unified distributed execution platform accessible through ENTENCY UP.
+
+
+---
+
+Technical Principles
+
+Deterministic builds
+
+Version-locked runtime-node coupling
+
+Architecture-first engineering
+
+Protocol-level extensibility
+
+Distribution-aware design
+
+Reproducibility over convenience
+
+Separation of control and execution layers
+
+
+
+---
+
+Philosophy
+
+Infrastructure shapes possibility.
+
+Browsers defined access.
+Cloud defined scale.
+Distributed systems redefine trust.
+
+ENTENCY explores what happens when execution, protocol, and distribution are unified under a single deterministic runtime.
+
+This repository communicates that architecture and its evolution.
+
+Core engine remains closed during active foundational development.
