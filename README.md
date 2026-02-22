@@ -102,7 +102,7 @@ ENTENCY is designed for distributed-native environments.
 
 Because the system is built holistically.
 
-ENTENCY UP (Workstation Runtime)
+ENTENCY UP (Unified Protocol Browser and Workstation Runtime)
 +
 ENTENCY GNS (Global Neural System)
 ==================================
@@ -122,7 +122,7 @@ High-level system structure:
 ```
 +---------------------------------------------------------+
 |                    ENTENCY UP                           |
-|        (Unified Browser & Workstation Runtime)          |
+|    (Unified Protocol Browser & Workstation Runtime)     |
 |                                                         |
 |  +-------------------+     +------------------------+   |
 |  | Session FSM       | --> | Protocol Router        |   |
@@ -181,8 +181,6 @@ Core components:
 
 # Screenshots
 
-*(Replace with actual images after upload to the repo)*
-
 ### ENTENCY UP Interface
 
 ![ENTENCY UP UI](./assets/screenshots/up-interface.png)
@@ -199,27 +197,39 @@ Core components:
 
 # Roadmap
 
-### Phase 1 - Core Stability (Current)
+### Phase 1 — Core Architecture & Interface Foundation
+
+- Core runtime architecture design
+- Unified workstation engine (ENTENCY UP)
+- Foundational GNS node integration layer
+- Protocol routing framework
+- Session lifecycle engine (FSM-based)
+- UI system architecture and design language
+- Cross-platform rendering layer
+- Brand identity and interaction model
+
+### Phase 2 - Core Stability (Current)
 
 - Local node integration
-- Linux ARM64 packaging
+- Windows x64 packaging
+- Linux x64 and Linux ARM64 packaging
 - Deterministic CI builds
 - Unified release pipeline
 
-### Phase 2 - Distributed Chunk Network
+### Phase 3 - Distributed Chunk Network
 
 - Cross-node chunk orchestration
 - Content fragmentation and reassembly
 - Distributed streaming layer
 - Fault tolerance mechanisms
 
-### Phase 3 - Protocol Expansion
+### Phase 4 - Protocol Expansion
 
 - Extended gns:// capabilities
 - Secure node identity model
 - Tokenized network fuel layer (ENT)
 
-### Phase 4 - Ecosystem Layer
+### Phase 5 - Ecosystem Layer
 
 - Public SDK
 - Developer integration tools
@@ -241,7 +251,7 @@ Linux x64 (.deb)
 Linux ARM64 (.deb)
 -> [https://github.com/entencyhungary/entency/releases/latest](https://github.com/entencyhungary/entency/releases/latest)
 
-(Replace with direct asset links once available.)
+(Links are NOT available yet)
 
 ---
 
