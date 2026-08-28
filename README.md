@@ -29,6 +29,24 @@ It is not simply a hosting platform.
 
 ---
 
+# Documentation
+
+The public ENTENCY knowledge base provides focused technical introductions, terminology, capability status and architectural context:
+
+- [What is ENTENCY?](docs/WHAT_IS_ENTENCY.md) — canonical overview of the project and its purpose.
+- [ENTENCY UP](docs/ENTENCY_UP.md) — the Browser, Workstation and user-facing execution environment.
+- [ENTENCY GNS](docs/ENTENCY_GNS.md) — the Global Neural System and distributed node infrastructure.
+- [Architecture](docs/ARCHITECTURE.md) — how UP, GNS, protocols, objects and services fit together.
+- [Capabilities](docs/CAPABILITIES.md) — implemented, validated, experimental and planned capability status.
+- [GNS Protocol](docs/GNS_PROTOCOL.md) — GNS-native addressing, objects, services and `gns://` concepts.
+- [Terminology](docs/TERMINOLOGY.md) — canonical definitions for ENTENCY, UP, GNS, ENT, AXI and related terms.
+- [FAQ](docs/FAQ.md) — concise answers to common questions and potential points of confusion.
+- [Roadmap](docs/ROADMAP.md) — current development direction toward a hardened public network.
+
+These documents are intended to describe the project without presenting planned functionality as completed capability.
+
+---
+
 # Why ENTENCY?
 
 Modern internet infrastructure is composed of many independent layers:
